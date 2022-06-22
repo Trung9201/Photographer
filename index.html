@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tivi-Photographer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700&family=Nunito:wght@200;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="logo">
+      <h1>Tivi</h1>
+    </div>
+
+    <nav class="navbar" id="navbar">
+      <div class="nav__menu">
+        <a class="nav--item active" href="#">Women</a>
+        <a class="nav--item" href="#">Men</a>
+        <!-- <a class="nav--item " href="#">Products</a> -->
+        <a class="nav--item" href="#">About</a>
+      </div>
+      <div class="toggle__menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    </nav>
+
+    <div class="contract__me">
+      <a href=""><i class="fa-brands fa-facebook"></i></a>
+      <a href=""><i class="fa-brands fa-instagram"></i></a>
+      <a href=""><i class="fa-brands fa-twitter"></i></a>
+    </div>
+
+    <div id="container">
+      <!-- <div class="container--content">
+            <img src="/img/8.jpg" alt="">
+            <img src="/img/4.jpg" alt="">
+            <img src="/img/7.jpg" alt="">
+            <img src="/img/1.jpg" alt="">
+            <img src="/img/2.jpg" alt="">
+            <img src="/img/14.jpg" alt="">
+            <img src="/img/3.jpg" alt="">
+            <img src="/img/9.jpg" alt="">
+            <img src="/img/17.jpg" alt="">
+        </div> -->
+      <div class="container--content active">
+        <img src="/img/4.jpg" alt="" />
+        <img src="/img/21.jpg" alt="" />
+        <img src="/img/6.jpg" alt="" />
+        <img src="/img/9.jpg" alt="" />
+        <img src="/img/12.jpg" alt="" />
+        <img src="/img/22.jpg" alt="" />
+      </div>
+      <div class="container--content">
+        <img src="/img/3.jpg" alt="" />
+        <img src="/img/7.jpg" alt="" />
+        <img src="/img/8.jpg" alt="" />
+        <img src="/img/15.jpg" alt="" />
+        <img src="/img/17.jpg" alt="" />
+        <img src="/img/29.jpg" alt="" />
+      </div>
+      <div class="container--content about">
+        <img src="/img/thu.jpg" alt="" />
+        <div class="about__me">
+          <h1>About me</h1>
+          <p>
+            I've always loved photography, ever since I was a little child and
+            got my hands on my first Canon camera. The world somehow makes more
+            sense when observed through a lens, and I find that by finding and
+            looking for new perspectives, you understand certain aspects of life
+            more thoroughly. In my photography, I always try to capture the
+            essence of the moment, and communicate how I experience and feel.
+          </p>
+          <div class="information">
+            <p>Email: <a href="#">thuvu1996@gmail.com</a></p>
+            <p>Phone: <a href="#">0332631117</a></p>
+          </div>
+          <div class="contract">
+            <p>Your email*</p>
+            <input
+              class="input email"
+              type="text"
+              placeholder="Your email address"
+            />
+            <p>Message*</p>
+            <textarea
+              class="input message"
+              type="text"
+              placeholder="Enter your message"
+            ></textarea>
+            <button>Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer">
+      <p>
+        Powered by
+        <a href="https://trung9201.github.io/trung-hip/">TrungHips</a>
+      </p>
+    </div>
+
+    <script>
+      const $ = document.querySelector.bind(document);
+      const $$ = document.querySelectorAll.bind(document);
+
+      const navItems = $$(".nav--item");
+      const contents = $$(".container--content");
+
+      navItems.forEach((nav, index) => {
+        const content = contents[index];
+        nav.onclick = function () {
+          $(".nav--item.active").classList.remove("active");
+          $(".container--content.active").classList.remove("active");
+          this.classList.add("active");
+          content.classList.add("active");
+        };
+      });
+    </script>
+  </body>
+</html>
